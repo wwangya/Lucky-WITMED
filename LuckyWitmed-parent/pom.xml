@@ -24,6 +24,11 @@
     <project.version>1.18.24</project.version>
     <mapstruct.version>1.5.2.Final</mapstruct.version>
     <hutool-all.version>5.8.4</hutool-all.version>
+    <mysql-connector-java.version>8.0.29</mysql-connector-java.version>
+    <druid-spring-boot-starter.version>1.2.11</druid-spring-boot-starter.version>
+    <mybatis-spring-boot-starter.version>2.2.2</mybatis-spring-boot-starter.version>
+    <mybatis-plus-boot-starter.version>3.5.2</mybatis-plus-boot-starter.version>
+    <pagehelper-spring-boot-starter.version></pagehelper-spring-boot-starter.version>
   </properties>
 
   <dependencies>
