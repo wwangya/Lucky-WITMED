@@ -1,4 +1,4 @@
-package com.wwangya.com;
+package com.wwangya.witmed;
 
 import static org.junit.Assert.assertTrue;
 
