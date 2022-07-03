@@ -1,0 +1,6 @@
+###### 开启 Spring Boot 对于 Bean id 的 Override 机制
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  scan:
+    base-packages: cn.ekgc.addrook
