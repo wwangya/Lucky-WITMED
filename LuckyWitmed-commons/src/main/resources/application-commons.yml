@@ -3,4 +3,8 @@ spring:
   main:
     allow-bean-definition-overriding: true
   scan:
-    base-packages: cn.ekgc.addrook
+    base-packages: com.wwangya.witmed
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9999/eureka
