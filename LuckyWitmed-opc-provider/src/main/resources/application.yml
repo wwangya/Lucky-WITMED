@@ -4,4 +4,4 @@ spring:
   application:
     name: LuckyWitmed-opc-provider
   profiles:
-    active: data-commons
+    active: commons,data-commons
