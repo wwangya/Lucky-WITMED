@@ -26,7 +26,7 @@ public class ResponseVO<E> implements Serializable {
 	 * <b>获得系统响应成功视图信息</b>
 	 * @return
 	 */
-	public static ResponseVO getSuccessResponseVO() {
+	public static ResponseVO successResponseVO() {
 		return new ResponseVO(ResponseEnum.RESPONSE_SUCCESS, ResponseEnum.RESPONSE_SUCCESS.getRemark(), "");
 	}
 
@@ -35,7 +35,7 @@ public class ResponseVO<E> implements Serializable {
 	 * @param message
 	 * @return
 	 */
-	public static ResponseVO getSuccessResponseVO(String message) {
+	public static ResponseVO successResponseVO(String message) {
 		return new ResponseVO(ResponseEnum.RESPONSE_SUCCESS, message, "");
 	}
 
@@ -45,7 +45,7 @@ public class ResponseVO<E> implements Serializable {
 	 * @param data
 	 * @return
 	 */
-	public static ResponseVO getSuccessResponseVO(String message, Object data) {
+	public static ResponseVO successResponseVO(String message, Object data) {
 		return new ResponseVO(ResponseEnum.RESPONSE_SUCCESS, message, data);
 	}
 
@@ -53,7 +53,7 @@ public class ResponseVO<E> implements Serializable {
 	 * <b>获得用户未认证视图信息</b>
 	 * @return
 	 */
-	public static ResponseVO getUnAuthResponseVO() {
+	public static ResponseVO unAuthResponseVO() {
 		return new ResponseVO(ResponseEnum.RESPONSE_UNAUTH, ResponseEnum.RESPONSE_UNAUTH.getRemark(), "");
 	}
 
@@ -62,7 +62,7 @@ public class ResponseVO<E> implements Serializable {
 	 * @param message
 	 * @return
 	 */
-	public static ResponseVO getFailureResponseVO(String message) {
+	public static ResponseVO failureResponseVO(String message) {
 		return new ResponseVO(ResponseEnum.RESPONSE_FAILURE, message, "");
 	}
 
@@ -71,7 +71,7 @@ public class ResponseVO<E> implements Serializable {
 	 * @param fieldErrorVOList
 	 * @return
 	 */
-	/*public static ResponseVO getFailureResponseVO(List<FieldErrorVO> fieldErrorVOList) {
+	/*public static ResponseVO failureResponseVO(List<FieldErrorVO> fieldErrorVOList) {
 		return new ResponseVO(ResponseCodeEnum.RESPONSE_FAILURE, "错误信息列表", fieldErrorVOList);
 	}*/
 
@@ -80,7 +80,7 @@ public class ResponseVO<E> implements Serializable {
 	 * @param e
 	 * @return
 	 */
-	public static ResponseVO getExceptionResponseVO(Exception e) {
+	public static ResponseVO exceptionResponseVO(Exception e) {
 		return new ResponseVO(ResponseEnum.RESPONSE_EXCEPTION, e.getMessage(), e);
 	}
 }

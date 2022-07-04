@@ -1,5 +1,10 @@
 package com.wwangya.witmed.base.util;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.io.IOException;
+import java.util.Date;
 import java.util.Properties;
 
 /**
@@ -9,12 +14,15 @@ import java.util.Properties;
  * 2022/7/2
  */
 public class BaseConstants {
+	// 创建日志 Logger 对象，用于记录日志
+	private static Logger logger = LoggerFactory.getLogger(BaseConstants.class);
 	private static Properties props = new Properties();
 	static {
 		try {
 			props.load(BaseConstants.class.getClassLoader().getResourceAsStream("props/base/base.properties"));
-		} catch (Exception e) {
-			e.printStackTrace();
+		} catch (IOException e) {
+			logger.error(e.getMessage() + ":" + new Date(), e);
+			throw new RuntimeException(e);
 		}
 	}
 
@@ -47,14 +55,21 @@ public class BaseConstants {
 	 * <b>系统响应码信息：系统响应异常</b>
 	 */
 	public static final Integer RESPONSE_EXCEPTION = Integer.parseInt(props.getProperty("base.response.exception"));
+	/**
+	 * <b>系统启用状态</b>
+	 */
+	public static final String BASE_STATUS_ENABLE=props.getProperty("base.status.enable");
+	/**
+	 * <b>系统禁用状态</b>
+	 */
+	public static final String BASE_STATUS_DISABLE=props.getProperty("base.status.disable");
+	/**
+	 * <b>token 信息：token 加密私钥</b>
+	 */
+	public static final String BASE_TOKEN_KEY = props.getProperty("base.token.key");
 
 	/**
-	 * <b>Token 交互消息头绑定信息</b>
+	 * <b>token 信息：token 有效时长</b>
 	 */
-	public static final String TOKEN_HEADER = props.getProperty("base.token.header");
-
-	/**
-	 * <b>加密秘钥</b>
-	 */
-	public static final String TOKEN_SECRET = props.getProperty("base.token.secret");
+	public static final Integer BASE_TOKEN_EXPIRE = Integer.parseInt(props.getProperty("base.token.expire"));
 }

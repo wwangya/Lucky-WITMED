@@ -1,4 +1,4 @@
-package com.wwangya.witmed.base.pojo.vo;
+package com.wwangya.witmed.base.pojo.entity;
 
 import lombok.Data;
 
@@ -9,10 +9,10 @@ import java.util.Date;
  * <b></b>
  *
  * @author WWY
- * 2022/7/2
+ * 2022/7/4
  */
 @Data
-public class BaseVO implements Serializable {
+public class BaseEntity implements Serializable {
 	private String status;
 	private String createdBy;
 	private Date createTime;

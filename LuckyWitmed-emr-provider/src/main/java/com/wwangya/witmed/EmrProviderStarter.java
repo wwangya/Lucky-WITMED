@@ -12,7 +12,7 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
  * 2022/7/3
  */
 @SpringBootApplication
-@MapperScan("com.wwangya.witmed.dao")
+@MapperScan("com.wwangya.witmed.*.*.dao")
 @EnableEurekaClient
 public class EmrProviderStarter {
 	public static void main(String[] args) {

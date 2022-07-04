@@ -33,7 +33,7 @@ public class RedisUtil {
 		// 根据 key，将 value 存储到 Redis 中
 		redisTemplate.opsForValue().set(key, valueJSON);
 		// 判断是否设置存储的时长
-		if (expireSec != null && expireSec > 0) {
+		if (expireSec != null && expireSec > -1) {
 			// 设置存储时间
 			redisTemplate.expire(key, expireSec, TimeUnit.SECONDS);
 		}

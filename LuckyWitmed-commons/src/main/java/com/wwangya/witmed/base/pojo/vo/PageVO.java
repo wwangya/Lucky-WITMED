@@ -1,6 +1,7 @@
 package com.wwangya.witmed.base.pojo.vo;
 
 import com.wwangya.witmed.base.util.BaseConstants;
+import lombok.Data;
 
 import java.io.Serializable;
 import java.util.List;
@@ -11,6 +12,7 @@ import java.util.List;
  * @author WWY
  * 2022/7/2
  */
+@Data
 public class PageVO<E extends BaseVO> implements Serializable {
 	private static final long serialVersionUID = 6064941315485331372L;
 	private Integer pageNum;                    // 当前页码

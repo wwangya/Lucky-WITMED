@@ -14,7 +14,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
  */
 @SpringBootApplication
 @EnableEurekaClient
-@MapperScan("com.wwangya.witmed")
+@MapperScan("com.wwangya.witmed.*.*.dao")
 public class PatientProviderStarter {
 	public static void main(String[] args) {
 		SpringApplication.run(PatientProviderStarter.class, args);
